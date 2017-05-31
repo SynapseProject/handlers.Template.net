@@ -47,11 +47,21 @@ public class TemplateHandler : HandlerRuntimeBase
 
         OnLogMessage("ParamValues", "================================");
         OnLogMessage("ParamValues", "ParamValue1  = " + parameters.ParamValue1);
-        OnLogMessage("ParamValues", "ParamValue2  = " + parameters.ParamValue2);        foreach (String value in config.ConfigValues3)
+        OnLogMessage("ParamValues", "ParamValue2  = " + parameters.ParamValue2);
             foreach (String param in parameters.ParamValues3)
                 OnLogMessage("ParamValues", "ParamValue3  = " + param);
 
         return result;
+    }
+
+    public override object GetConfigInstance()
+    {
+        throw new NotImplementedException();
+    }
+
+    public override object GetParametersInstance()
+    {
+        throw new NotImplementedException();
     }
 }
 
